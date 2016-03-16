@@ -105,3 +105,25 @@ a:focus {
 	max-width: 800px;
 	margin: 0 auto;
 }
+
+/*-----------------------------
+*	States
+-----------------------------*/
+
+.is-liked {
+	animation: flash 2s;
+}
+
+/*-----------------------------
+*	Animation
+-----------------------------*/
+
+@keyframes flash {
+	from, 50%, to {
+		opacity: 0;		
+	}
+	25%, 75% {
+		opacity: 1;		
+	}
+
+}
