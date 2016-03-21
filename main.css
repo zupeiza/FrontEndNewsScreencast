@@ -24,7 +24,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-
+	margin-top: 0px;
+	margin-bottom: 5px;
 }
 
 ol {
@@ -86,6 +87,12 @@ a:focus {
 	padding-bottom: 20px;
 }
 
+.news-item:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 .news-link {
 	color: #3f51b5;
 	display: block;
@@ -101,6 +108,10 @@ a:focus {
 /*-----------------------------
 *	Content
 -----------------------------*/
+
+.content {
+	margin-bottom: 40px;
+}
 
 .container {
 	max-width: 800px;
@@ -153,6 +164,73 @@ a:focus {
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/*-----------------------------
+*	Modal
+-----------------------------*/
+
+.modal {
+	background-color: #fff;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+	left: 50%;
+	position: absolute;
+	top: 40px;
+	transform: translate(-50%, -10%);
+	width: 500px;
+	z-index: 2;
+	transition: 0.4 ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal.is-visible {
+	transform: translate(-50%, 0%);
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+.modal-media {
+	position: relative;
+
+}
+
+.modal-media-title {
+	color: #fff;
+	bottom: 20px;
+	font-size: 30px;
+	left: 20px;
+	position: absolute;
+}
+
+.modal-overlay {
+	background-color: #212121;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	transition: 0.4 ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal-overlay.is-visible {
+	height: auto;
+	opacity: 0.4;
+	visibility: visible;
+	transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 /*-----------------------------
